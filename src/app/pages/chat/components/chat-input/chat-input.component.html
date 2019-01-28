@@ -1,0 +1,19 @@
+<!-- <div class="new-message-wrapper d-flex"> -->
+  <div class="responsive">
+  <emoji-mart *ngIf="dropEmoji" isNative="true" title="Pick your emoji…" emoji="point_up"  set="apple" [perLine]="18" class="picker" (emojiClick)="addEmoji($event)"></emoji-mart>
+  </div>
+    
+    
+  <div class="input-group">
+    <button  class="btn btn-primary emoji" type="button" (click)="dropdownEmoji()">emoji</button>
+    <textarea [(ngModel)]="newMessageText" type="text" class="form-control" placeholder="Enter a new message" (keyup.enter)="submit(newMessage.value)" #newMessage>
+      </textarea>
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" (click)="submit(newMessage.value)">Enter</button>
+    </div>
+  </div>
+  <div class="custom-file mb-3">
+      <input type="file" class="custom-file-input" id="customFile" name="filename" (change)="uploadFile($event)">
+      <label class="custom-file-label" for="customFile">Choose file</label>
+      </div>
+<!--  -->

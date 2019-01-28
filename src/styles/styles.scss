@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "~@ctrl/ngx-emoji-mart/picker";
+@import "../../node_modules/prismjs/themes/prism-okaidia.css";
+
+body {
+    color: $secondary;
+}
+
+.container-wrapper {
+    height: calc(100vh - 80px) !important;
+}
+
+.navbar {
+    height: 80px;
+}
+
+button {
+    width: 100%;
+    &.btn {
+        border-radius: 0;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

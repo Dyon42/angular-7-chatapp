@@ -1,0 +1,7 @@
+<div class="h-100 d-flex flex-column chatroom-list">
+  <ng-container *ngFor="let user of chatroomService.activeUsers | async">
+    <div class="chatroom-list-item">
+      {{ user.firstName }}
+    </div>
+  </ng-container>
+</div>
